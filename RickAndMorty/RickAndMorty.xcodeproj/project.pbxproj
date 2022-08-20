@@ -12,6 +12,10 @@
 		0274380928B0778B0005142F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0274380828B0778B0005142F /* Assets.xcassets */; };
 		0274380C28B0778B0005142F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0274380A28B0778B0005142F /* LaunchScreen.storyboard */; };
 		0274381528B079D30005142F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0274381428B079D30005142F /* SnapKit */; };
+		0274381F28B07D480005142F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0274381E28B07D480005142F /* AppCoordinator.swift */; };
+		0274382428B07FE60005142F /* CharacterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0274382328B07FE60005142F /* CharacterListViewController.swift */; };
+		0274382628B080320005142F /* CharacterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0274382528B080320005142F /* CharacterListViewModel.swift */; };
+		0274382828B080F10005142F /* CharacterListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0274382728B080F10005142F /* CharacterListCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +25,10 @@
 		0274380828B0778B0005142F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0274380B28B0778B0005142F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0274380D28B0778B0005142F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0274381E28B07D480005142F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		0274382328B07FE60005142F /* CharacterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewController.swift; sourceTree = "<group>"; };
+		0274382528B080320005142F /* CharacterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModel.swift; sourceTree = "<group>"; };
+		0274382728B080F10005142F /* CharacterListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +68,9 @@
 				0274381A28B07BBF0005142F /* View */,
 				0274381B28B07BC60005142F /* ViewModel */,
 				0274381C28B07BEE0005142F /* Service */,
-				0274380D28B0778B0005142F /* Info.plist */,
+				0274382028B07F0E0005142F /* Controller */,
 				0274380828B0778B0005142F /* Assets.xcassets */,
+				0274380D28B0778B0005142F /* Info.plist */,
 				0274380A28B0778B0005142F /* LaunchScreen.storyboard */,
 			);
 			path = RickAndMorty;
@@ -79,6 +88,8 @@
 		0274381728B07B790005142F /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				0274381E28B07D480005142F /* AppCoordinator.swift */,
+				0274382728B080F10005142F /* CharacterListCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -100,6 +111,7 @@
 		0274381B28B07BC60005142F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0274382528B080320005142F /* CharacterListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -117,6 +129,14 @@
 			children = (
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		0274382028B07F0E0005142F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0274382328B07FE60005142F /* CharacterListViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,7 +215,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0274382828B080F10005142F /* CharacterListCoordinator.swift in Sources */,
+				0274382428B07FE60005142F /* CharacterListViewController.swift in Sources */,
+				0274381F28B07D480005142F /* AppCoordinator.swift in Sources */,
 				0274380028B077880005142F /* AppDelegate.swift in Sources */,
+				0274382628B080320005142F /* CharacterListViewModel.swift in Sources */,
 				0274380228B077880005142F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
