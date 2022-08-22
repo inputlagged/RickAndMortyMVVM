@@ -38,7 +38,6 @@ extension CharacterListViewModel: UICollectionViewDataSource {
 		
 		cell.setup(with: characterList[indexPath.item])
 		
-		self.collectionView?.reloadData()
 		
 		return cell
 	}

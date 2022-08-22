@@ -36,3 +36,10 @@ struct CharacterLocation: Decodable {
 	let name: String
 	let url: String
 }
+
+struct CharacterURLParamters: Decodable {
+	var page: String?
+	var name: String?
+	var status: String?
+	var gender: String?
+}
