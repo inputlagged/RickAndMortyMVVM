@@ -18,7 +18,8 @@ final class CharacterListCoordinator: Coordinator {
 	}
 	
 	func start() {
-		let characterListViewModel = CharacterListViewModel()
+		let networkService = NetworkService()
+		let characterListViewModel = CharacterListViewModel(characterNetworkService: networkService)
 		characterListViewModel.coordinator = self
 		characterListViewController.viewModel = characterListViewModel
 		navigationController.setViewControllers([characterListViewController], animated: false)

@@ -39,7 +39,4 @@ struct CharacterLocation: Decodable {
 
 struct CharacterURLParamters: Decodable {
 	var page: String?
-	var name: String?
-	var status: String?
-	var gender: String?
 }

@@ -22,10 +22,7 @@ enum URLFactory {
 	static func getCharacter(params: CharacterURLParamters) -> String {
 		var urlComponents = baseURLComponents
 		let queryItems = [
-			URLQueryItem(name: "page", value: params.page ?? ""),
-			URLQueryItem(name: "name", value: params.name ?? ""),
-			URLQueryItem(name: "status", value: params.status ?? ""),
-			URLQueryItem(name: "gender", value: params.gender ?? ""),
+			URLQueryItem(name: "page", value: params.page ?? "")
 		]
 		urlComponents.queryItems?.append(contentsOf: queryItems)
 		return urlComponents.url!.appendingPathComponent(API.TypeOf.characters).absoluteString

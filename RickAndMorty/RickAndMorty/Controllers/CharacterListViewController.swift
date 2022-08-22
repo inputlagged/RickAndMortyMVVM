@@ -29,6 +29,7 @@ final class CharacterListViewController: UIViewController {
 		view.backgroundColor = .red
 		
 		setupUI()
+		viewModel.fetchCharacters()
     }
 	
 	// MARK: - Private methods

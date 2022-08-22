@@ -13,16 +13,43 @@ final class CharacterListViewModel: NSObject {
 	
 	public weak var collectionView: UICollectionView?
 	
-	private var characterList: [Character] = [Character(id: 90, name: "Daron Jefferson", status: "Alive", species: "Alien", type: "Cone-nippled alien", gender: "Male", origin: Origin(name: "ss", url: "ss"), location: CharacterLocation(name: "ss", url: "ss"), episode: ["ss"], imageURL: "https://rickandmortyapi.com/api/character/avatar/90.jpeg", created: Date(), url: "ss"), Character(id: 90, name: "Daron Jefferson", status: "Alive", species: "Alien", type: "Cone-nippled alien", gender: "Male", origin: Origin(name: "ss", url: "ss"), location: CharacterLocation(name: "ss", url: "ss"), episode: ["ss"], imageURL: "https://rickandmortyapi.com/api/character/avatar/90.jpeg", created: Date(), url: "ss"), Character(id: 90, name: "Daron Jefferson", status: "Alive", species: "Alien", type: "Cone-nippled alien", gender: "Male", origin: Origin(name: "ss", url: "ss"), location: CharacterLocation(name: "ss", url: "ss"), episode: ["ss"], imageURL: "https://rickandmortyapi.com/api/character/avatar/90.jpeg", created: Date(), url: "ss"), Character(id: 90, name: "Daron Jefferson", status: "Alive", species: "Alien", type: "Cone-nippled alien", gender: "Male", origin: Origin(name: "ss", url: "ss"), location: CharacterLocation(name: "ss", url: "ss"), episode: ["ss"], imageURL: "https://rickandmortyapi.com/api/character/avatar/90.jpeg", created: Date(), url: "ss")]
-		
+	private var characterList: [Character] = [] {
+		didSet {
+			DispatchQueue.main.async {
+				self.collectionView?.reloadData()
+			}
+		}
+	}
+	private let characterNetworkService: NetworkServiceProtocol
+	private var parameters = CharacterURLParamters(page: "1")
 	
 	
+	// MARK: - Init
+	
+	init(characterNetworkService: NetworkServiceProtocol) {
+		self.characterNetworkService = characterNetworkService
+	}
+
 	// MARK: Helpers
 	
 	public func setupCollectionView() {
 		collectionView?.register(CharacterCollectionViewCell.self, forCellWithReuseIdentifier: CharacterCollectionViewCell.identifier)
 		collectionView?.delegate = self
 		collectionView?.dataSource = self
+	}
+	
+	public func fetchCharacters() {
+		characterNetworkService.fetchCharacters(with: parameters) { [weak self] result in
+			guard let self = self else { return }
+			switch result {
+			case .success(let response):
+				self.characterList.append(contentsOf: response.results)
+				let nextPage = Int(self.parameters.page!)! + 1
+				self.parameters.page = String(nextPage)
+			case .failure(let error):
+				print(error)
+			}
+		}
 	}
 }
 
@@ -38,7 +65,6 @@ extension CharacterListViewModel: UICollectionViewDataSource {
 		
 		cell.setup(with: characterList[indexPath.item])
 		
-		
 		return cell
 	}
 }
@@ -46,7 +72,10 @@ extension CharacterListViewModel: UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegate
 
 extension CharacterListViewModel: UICollectionViewDelegate {
-	
+	func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+		guard indexPath.row == characterList.count - 1 else { return }
+		fetchCharacters()
+	}
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout

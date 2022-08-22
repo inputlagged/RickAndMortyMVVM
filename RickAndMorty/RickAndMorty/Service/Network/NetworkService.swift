@@ -33,6 +33,18 @@ final class NetworkService {
 			}
 
 			let decoder = JSONDecoder()
+			let formatter = DateFormatter()
+			formatter.locale = Locale(identifier: "ru_RU")
+			formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+			decoder.dateDecodingStrategy = .formatted(formatter)
+//			private(set) var decoder = JSONDecoder()
+//
+//			init() {
+//				let formatter = DateFormatter()
+//				formatter.locale = Locale(identifier: "ru_RU")
+//				formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+//				decoder.dateDecodingStrategy = .formatted(formatter)
+//			}
 			do {
 				let decodedModel = try decoder.decode(T.self, from: data)
 				completion(.success(decodedModel))
