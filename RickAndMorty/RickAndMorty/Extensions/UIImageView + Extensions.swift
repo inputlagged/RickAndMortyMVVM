@@ -14,4 +14,9 @@ extension UIImageView {
 		self.kf.indicatorType = .activity
 		self.kf.setImage(with: url, placeholder: placeholder)
 	}
+    
+    func setImageOffline(with url: URL?) {
+        self.kf.indicatorType = .activity
+        self.kf.setImage(with: url, placeholder: UIImage(named: "placeholder"), options: [.onlyFromCache])
+    }
 }

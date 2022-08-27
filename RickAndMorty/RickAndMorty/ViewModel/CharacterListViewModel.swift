@@ -51,6 +51,13 @@ final class CharacterListViewModel: NSObject {
 			}
 		}
 	}
+    
+    private func characterCellTapped(with index: Int) {
+//        guard let character = characterList[index] else { return }
+//        coordinator.sta
+        let character = characterList[index] 
+        coordinator?.startDetailCharacterViewControllerPresent(with: character)
+    }
 }
 
 // MARK: - UICollectionViewDataSource
@@ -76,6 +83,10 @@ extension CharacterListViewModel: UICollectionViewDelegate {
 		guard indexPath.row == characterList.count - 1 else { return }
 		fetchCharacters()
 	}
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        characterCellTapped(with: indexPath.row)
+    }
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout

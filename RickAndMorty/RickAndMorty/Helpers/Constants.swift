@@ -15,6 +15,7 @@ enum Constants {
 
 enum Colors {
 	static let lightGray = UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 0.9)
+    static let lightGrayDetail = UIColor(red: 240/255, green: 240/255, blue: 246/255, alpha: 1.0)
 }
 
 struct CharacterConstants {

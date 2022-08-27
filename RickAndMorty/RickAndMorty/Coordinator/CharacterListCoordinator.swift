@@ -25,6 +25,13 @@ final class CharacterListCoordinator: Coordinator {
 		navigationController.setViewControllers([characterListViewController], animated: false)
 	
 	}
+    
+    func startDetailCharacterViewControllerPresent(with character: Character) {
+        let characterDetailCoordinator = CharacterDetailCoordinator(navigationController: navigationController, character: character)
+        characterDetailCoordinator.parentCoordinator = self
+        childCoordinators.append(characterDetailCoordinator)
+        characterDetailCoordinator.start()
+    }
 	
 	func childDidFinish(_ childCoordinator: Coordinator) {
 		if let index = childCoordinators.firstIndex(where: { coordinator -> Bool in
