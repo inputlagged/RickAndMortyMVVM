@@ -32,13 +32,13 @@ final class CharacterListViewModel: NSObject {
 
 	// MARK: Helpers
 	
-	public func setupCollectionView() {
+	func setupCollectionView() {
 		collectionView?.register(CharacterCollectionViewCell.self, forCellWithReuseIdentifier: CharacterCollectionViewCell.identifier)
 		collectionView?.delegate = self
 		collectionView?.dataSource = self
 	}
 	
-	public func fetchCharacters() {
+	func fetchCharacters() {
 		characterNetworkService.fetchCharacters(with: parameters) { [weak self] result in
 			guard let self = self else { return }
 			switch result {
@@ -52,10 +52,12 @@ final class CharacterListViewModel: NSObject {
 		}
 	}
     
+    func showLikedViewController() {
+        coordinator?.startLikedCharacterViewControllerPresent()
+    }
+    
     private func characterCellTapped(with index: Int) {
-//        guard let character = characterList[index] else { return }
-//        coordinator.sta
-        let character = characterList[index] 
+        let character = characterList[index]
         coordinator?.startDetailCharacterViewControllerPresent(with: character)
     }
 }

@@ -9,8 +9,7 @@ import UIKit
 
 final class CharacterListViewController: UIViewController {
 	
-	public var viewModel: CharacterListViewModel!
-	
+    var viewModel: CharacterListViewModel!
 	private var characterCollectionView: UICollectionView
 	
 	init() {
@@ -25,16 +24,22 @@ final class CharacterListViewController: UIViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-
-		view.backgroundColor = .red
-		
+        
+        view.backgroundColor = .white
 		setupUI()
 		viewModel.fetchCharacters()
     }
 	
 	// MARK: - Private methods
+    
+    @objc private func showLikedViewController() {
+        viewModel.showLikedViewController()
+    }
 	
 	private func setupUI() {
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Liked", style: .plain, target: self, action: #selector(showLikedViewController))
+        
 		viewModel.collectionView = characterCollectionView
 		
 		characterCollectionView.translatesAutoresizingMaskIntoConstraints = false

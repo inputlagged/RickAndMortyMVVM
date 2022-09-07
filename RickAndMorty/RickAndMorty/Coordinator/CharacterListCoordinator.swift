@@ -32,6 +32,14 @@ final class CharacterListCoordinator: Coordinator {
         childCoordinators.append(characterDetailCoordinator)
         characterDetailCoordinator.start()
     }
+    
+    func startLikedCharacterViewControllerPresent() {
+        let characterLikedCoordinator = CharacterLikedCoordinator(navigationController: navigationController, character: nil)
+        childCoordinators.append(characterLikedCoordinator)
+        characterLikedCoordinator.parentCoordinator = self
+        characterLikedCoordinator.parentViewController = characterListViewController
+        characterLikedCoordinator.start()
+    }
 	
 	func childDidFinish(_ childCoordinator: Coordinator) {
 		if let index = childCoordinators.firstIndex(where: { coordinator -> Bool in

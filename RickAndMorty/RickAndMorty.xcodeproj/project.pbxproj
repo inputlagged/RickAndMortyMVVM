@@ -10,6 +10,13 @@
 		0220F6FF28B65A1500864126 /* CharacterDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0220F6FE28B65A1500864126 /* CharacterDetailCoordinator.swift */; };
 		0220F70128B65ADE00864126 /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0220F70028B65ADE00864126 /* CharacterDetailViewController.swift */; };
 		0220F70328B65BC600864126 /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0220F70228B65BC600864126 /* CharacterDetailViewModel.swift */; };
+		023333B628C3521000C18F38 /* Character.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 023333B428C3521000C18F38 /* Character.xcdatamodeld */; };
+		023333B928C3550B00C18F38 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023333B828C3550B00C18F38 /* CoreDataManager.swift */; };
+		023333BC28C357FE00C18F38 /* LikedCharacter+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023333BA28C357FE00C18F38 /* LikedCharacter+CoreDataClass.swift */; };
+		023333BD28C357FE00C18F38 /* LikedCharacter+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023333BB28C357FE00C18F38 /* LikedCharacter+CoreDataProperties.swift */; };
+		023333BF28C3588E00C18F38 /* CoreDataManager+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023333BE28C3588E00C18F38 /* CoreDataManager+Extensions.swift */; };
+		023333C128C358AF00C18F38 /* CoreDataManager+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023333C028C358AF00C18F38 /* CoreDataManager+Protocol.swift */; };
+		023333C328C3590800C18F38 /* LikedCharacterModel .swift in Sources */ = {isa = PBXBuildFile; fileRef = 023333C228C3590800C18F38 /* LikedCharacterModel .swift */; };
 		023B6AA228BDCA9B00441A7C /* InfoHeaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023B6AA128BDCA9B00441A7C /* InfoHeaderSectionView.swift */; };
 		0250AB8328B20ACD0025400B /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0250AB8228B20ACD0025400B /* API.swift */; };
 		0250AB8528B20D050025400B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0250AB8428B20D050025400B /* NetworkService.swift */; };
@@ -30,6 +37,9 @@
 		0276BF1C28B32844005B71C9 /* NetworkService+Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0276BF1B28B32844005B71C9 /* NetworkService+Characters.swift */; };
 		0276BF1E28B32914005B71C9 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0276BF1D28B32914005B71C9 /* Response.swift */; };
 		0276BF2028B32948005B71C9 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0276BF1F28B32948005B71C9 /* Info.swift */; };
+		027D84F528C324B600F41C4B /* CharacterLikedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027D84F428C324B600F41C4B /* CharacterLikedCoordinator.swift */; };
+		027D84F728C325FE00F41C4B /* CharacterLikedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027D84F628C325FE00F41C4B /* CharacterLikedViewController.swift */; };
+		027D84F928C3264500F41C4B /* CharacterLikedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027D84F828C3264500F41C4B /* CharacterLikedViewModel.swift */; };
 		027F5C2028B89B1C005C7F7A /* CharacterDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027F5C1F28B89B1C005C7F7A /* CharacterDetailHeaderView.swift */; };
 		02DE17F528B9B67F00F9183C /* CharaterDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE17F428B9B67F00F9183C /* CharaterDetailTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -38,6 +48,13 @@
 		0220F6FE28B65A1500864126 /* CharacterDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailCoordinator.swift; sourceTree = "<group>"; };
 		0220F70028B65ADE00864126 /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
 		0220F70228B65BC600864126 /* CharacterDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewModel.swift; sourceTree = "<group>"; };
+		023333B528C3521000C18F38 /* Character.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Character.xcdatamodel; sourceTree = "<group>"; };
+		023333B828C3550B00C18F38 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		023333BA28C357FE00C18F38 /* LikedCharacter+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LikedCharacter+CoreDataClass.swift"; sourceTree = "<group>"; };
+		023333BB28C357FE00C18F38 /* LikedCharacter+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LikedCharacter+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		023333BE28C3588E00C18F38 /* CoreDataManager+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+Extensions.swift"; sourceTree = "<group>"; };
+		023333C028C358AF00C18F38 /* CoreDataManager+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+Protocol.swift"; sourceTree = "<group>"; };
+		023333C228C3590800C18F38 /* LikedCharacterModel .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LikedCharacterModel .swift"; sourceTree = "<group>"; };
 		023B6AA128BDCA9B00441A7C /* InfoHeaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoHeaderSectionView.swift; sourceTree = "<group>"; };
 		0250AB8228B20ACD0025400B /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		0250AB8428B20D050025400B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -59,6 +76,9 @@
 		0276BF1B28B32844005B71C9 /* NetworkService+Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkService+Characters.swift"; sourceTree = "<group>"; };
 		0276BF1D28B32914005B71C9 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		0276BF1F28B32948005B71C9 /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
+		027D84F428C324B600F41C4B /* CharacterLikedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterLikedCoordinator.swift; sourceTree = "<group>"; };
+		027D84F628C325FE00F41C4B /* CharacterLikedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterLikedViewController.swift; sourceTree = "<group>"; };
+		027D84F828C3264500F41C4B /* CharacterLikedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterLikedViewModel.swift; sourceTree = "<group>"; };
 		027F5C1F28B89B1C005C7F7A /* CharacterDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailHeaderView.swift; sourceTree = "<group>"; };
 		02DE17F428B9B67F00F9183C /* CharaterDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharaterDetailTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +95,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		023333B728C354C000C18F38 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				023333BA28C357FE00C18F38 /* LikedCharacter+CoreDataClass.swift */,
+				023333BB28C357FE00C18F38 /* LikedCharacter+CoreDataProperties.swift */,
+				023333B828C3550B00C18F38 /* CoreDataManager.swift */,
+				023333BE28C3588E00C18F38 /* CoreDataManager+Extensions.swift */,
+				023333C028C358AF00C18F38 /* CoreDataManager+Protocol.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		027437F328B077880005142F = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +126,7 @@
 		027437FE28B077880005142F /* RickAndMorty */ = {
 			isa = PBXGroup;
 			children = (
+				023333B728C354C000C18F38 /* CoreData */,
 				0274381628B079F80005142F /* Application */,
 				0274381728B07B790005142F /* Coordinator */,
 				0274381828B07BA20005142F /* Model */,
@@ -106,6 +139,7 @@
 				0274380828B0778B0005142F /* Assets.xcassets */,
 				0274383428B0F4AF0005142F /* Extensions */,
 				0274380A28B0778B0005142F /* LaunchScreen.storyboard */,
+				023333B428C3521000C18F38 /* Character.xcdatamodeld */,
 			);
 			path = RickAndMorty;
 			sourceTree = "<group>";
@@ -125,6 +159,7 @@
 				0274381E28B07D480005142F /* AppCoordinator.swift */,
 				0274382728B080F10005142F /* CharacterListCoordinator.swift */,
 				0220F6FE28B65A1500864126 /* CharacterDetailCoordinator.swift */,
+				027D84F428C324B600F41C4B /* CharacterLikedCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -135,6 +170,7 @@
 				0274382F28B0EBB30005142F /* Character.swift */,
 				0276BF1D28B32914005B71C9 /* Response.swift */,
 				0276BF1F28B32948005B71C9 /* Info.swift */,
+				023333C228C3590800C18F38 /* LikedCharacterModel .swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -155,6 +191,7 @@
 			children = (
 				0274382528B080320005142F /* CharacterListViewModel.swift */,
 				0220F70228B65BC600864126 /* CharacterDetailViewModel.swift */,
+				027D84F828C3264500F41C4B /* CharacterLikedViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -183,6 +220,7 @@
 			children = (
 				0274382328B07FE60005142F /* CharacterListViewController.swift */,
 				0220F70028B65ADE00864126 /* CharacterDetailViewController.swift */,
+				027D84F628C325FE00F41C4B /* CharacterLikedViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -282,9 +320,12 @@
 				0250AB8328B20ACD0025400B /* API.swift in Sources */,
 				0220F70328B65BC600864126 /* CharacterDetailViewModel.swift in Sources */,
 				0276BF2028B32948005B71C9 /* Info.swift in Sources */,
+				023333C128C358AF00C18F38 /* CoreDataManager+Protocol.swift in Sources */,
+				023333BC28C357FE00C18F38 /* LikedCharacter+CoreDataClass.swift in Sources */,
 				0274383028B0EBB30005142F /* Character.swift in Sources */,
 				0274382828B080F10005142F /* CharacterListCoordinator.swift in Sources */,
 				0250AB8728B20FC10025400B /* URLFactory.swift in Sources */,
+				023333B928C3550B00C18F38 /* CoreDataManager.swift in Sources */,
 				0276BF1E28B32914005B71C9 /* Response.swift in Sources */,
 				0274382428B07FE60005142F /* CharacterListViewController.swift in Sources */,
 				0220F70128B65ADE00864126 /* CharacterDetailViewController.swift in Sources */,
@@ -292,14 +333,21 @@
 				0274381F28B07D480005142F /* AppCoordinator.swift in Sources */,
 				0274383628B0F4BE0005142F /* UIImageView + Extensions.swift in Sources */,
 				02DE17F528B9B67F00F9183C /* CharaterDetailTableViewCell.swift in Sources */,
+				027D84F528C324B600F41C4B /* CharacterLikedCoordinator.swift in Sources */,
 				0274380028B077880005142F /* AppDelegate.swift in Sources */,
 				0220F6FF28B65A1500864126 /* CharacterDetailCoordinator.swift in Sources */,
 				0274382628B080320005142F /* CharacterListViewModel.swift in Sources */,
 				027F5C2028B89B1C005C7F7A /* CharacterDetailHeaderView.swift in Sources */,
+				023333BF28C3588E00C18F38 /* CoreDataManager+Extensions.swift in Sources */,
+				027D84F728C325FE00F41C4B /* CharacterLikedViewController.swift in Sources */,
 				0274380228B077880005142F /* SceneDelegate.swift in Sources */,
 				0274382B28B0BE7E0005142F /* CharacterCollectionViewCell.swift in Sources */,
+				023333BD28C357FE00C18F38 /* LikedCharacter+CoreDataProperties.swift in Sources */,
+				023333B628C3521000C18F38 /* Character.xcdatamodeld in Sources */,
 				0250AB8528B20D050025400B /* NetworkService.swift in Sources */,
+				023333C328C3590800C18F38 /* LikedCharacterModel .swift in Sources */,
 				0276BF1C28B32844005B71C9 /* NetworkService+Characters.swift in Sources */,
+				027D84F928C3264500F41C4B /* CharacterLikedViewModel.swift in Sources */,
 				0274382E28B0C0BA0005142F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -529,6 +577,19 @@
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		023333B428C3521000C18F38 /* Character.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				023333B528C3521000C18F38 /* Character.xcdatamodel */,
+			);
+			currentVersion = 023333B528C3521000C18F38 /* Character.xcdatamodel */;
+			path = Character.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 027437F428B077880005142F /* Project object */;
 }
